@@ -1,0 +1,298 @@
+@import './base.css';
+
+/*
+ * Main CSS for the Storage Demos app
+ * Shared styles for all demo components
+ */
+
+#app {
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(195, 85%, 52%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(195, 85%, 52%, 0.2);
+  }
+}
+
+/* ===========================================
+   LAYOUT
+   =========================================== */
+
+.demo {
+  max-width: 700px;
+}
+
+.demo.wide {
+  max-width: 900px;
+}
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+
+.demo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+}
+
+.demo h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+}
+
+.demo h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-heading);
+}
+
+.demo .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ===========================================
+   BUTTONS
+   =========================================== */
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background-color: hsla(195, 85%, 52%, 1);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--color-background-mute);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-clear {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: var(--color-background-mute);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+/* ===========================================
+   FORM ELEMENTS
+   =========================================== */
+
+.text-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.2s;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: hsla(195, 85%, 52%, 1);
+}
+
+.text-input::placeholder {
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* ===========================================
+   CODE BLOCKS
+   =========================================== */
+
+.demo code {
+  background-color: var(--color-background-mute);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.demo pre {
+  background-color: var(--color-background-mute);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.demo pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.code-block {
+  background-color: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.code-explanation,
+.code-examples {
+  display: grid;
+  gap: 1rem;
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* ===========================================
+   INSTRUCTIONS BOX
+   =========================================== */
+
+.test-instructions {
+  background-color: var(--color-background-soft);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.test-instructions ol,
+.test-instructions ul {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.test-instructions li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================================
+   LISTS
+   =========================================== */
+
+.demo ul,
+.demo ol {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.demo li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================================
+   UTILITY CLASSES
+   =========================================== */
+
+.current-state {
+  padding: 1rem;
+  background-color: var(--color-background-soft);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.preview {
+  padding: 1.5rem;
+  background-color: var(--color-background-soft);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.tip {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: hsla(195, 85%, 52%, 0.1);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.warning {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #c0392b;
+}
+
+.note,
+.code-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* ===========================================
+   BADGES
+   =========================================== */
+
+.restored-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: hsla(195, 85%, 52%, 0.2);
+  color: hsla(195, 85%, 52%, 1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ===========================================
+   KEYBOARD KEYS
+   =========================================== */
+
+kbd {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-background-mute);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
